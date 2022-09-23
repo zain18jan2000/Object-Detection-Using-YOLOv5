@@ -15,7 +15,7 @@ while True:
     blob = cv2.dnn.blobFromImage(img,scalefactor= 1/255,size=(640,640),mean=[0,0,0],swapRB= True, crop= False)
     net.setInput(blob)
     detections = net.forward()[0]
-    print(detections.shape)
+  
 
     # cx,cy , w,h, confidence, 80 class_scores
     # class_ids, confidences, boxes
